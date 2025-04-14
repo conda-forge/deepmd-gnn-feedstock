@@ -9,6 +9,7 @@
       "r_max": 6.0,
       "sel": "auto",
       "hidden_irreps": "64x0e",
+      "num_interactions": 1,
       "_comment2": " that's all"
     },
   
