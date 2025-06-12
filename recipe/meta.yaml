@@ -10,10 +10,8 @@ source:
   sha256: 1835e48d0d5de5cceeddb1d188c46034b24af857336f45d8c3e97ff34304de60
 
 build:
-  number: 1
+  number: 2
   skip: true  # [win]
-  # https://github.com/deepmodeling/deepmd-kit/issues/4686
-  skip: true  # [osx]
 
 requirements:
   build:
