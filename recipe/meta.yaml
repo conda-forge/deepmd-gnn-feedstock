@@ -1,5 +1,5 @@
 {% set name = "deepmd-gnn" %}
-{% set version = "0.1.1" %}
+{% set version = "0.1.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/deepmodeling/deepmd-gnn/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 1835e48d0d5de5cceeddb1d188c46034b24af857336f45d8c3e97ff34304de60
+  sha256: 4231059e7eee00a0a79d564d28b7ae7588d68a9050c7f66671ff1b14f6bbea2d
 
 build:
-  number: 2
+  number: 0
   skip: true  # [win]
 
 requirements:
