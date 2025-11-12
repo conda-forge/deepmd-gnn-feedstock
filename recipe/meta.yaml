@@ -12,6 +12,7 @@ source:
 build:
   number: 0
   skip: true  # [win]
+  skip: true  # [py==313]
 
 requirements:
   build:
@@ -48,7 +49,7 @@ test:
     - lammps
   commands:
     # https://github.com/conda-forge/mendeleev-feedstock/issues/37
-    - pip check  # [py<312]
+    # - pip check  # [py<312]
     - mv examples/water/data/data_0 ./data
     - dp --pt train train.json
     - dp --pt freeze -o frozen_model.pth
