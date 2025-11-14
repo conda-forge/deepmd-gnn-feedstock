@@ -10,9 +10,11 @@ source:
   sha256: 4231059e7eee00a0a79d564d28b7ae7588d68a9050c7f66671ff1b14f6bbea2d
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   skip: true  # [py==313]
+  skip: true  # [is_abi3 and not is_python_min]
+  python_version_independent: true   # [is_abi3]
 
 requirements:
   build:
@@ -21,6 +23,7 @@ requirements:
     - cmake
     - make
   host:
+    - python-abi3  # [is_abi3]
     - python
     - pip
     - scikit-build-core
@@ -47,6 +50,7 @@ test:
   requires:
     - pip
     - lammps
+    - abi3audit
   commands:
     # https://github.com/conda-forge/mendeleev-feedstock/issues/37
     # - pip check  # [py<312]
